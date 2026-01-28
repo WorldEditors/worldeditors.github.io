@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<title>Fan Wang - Long and Arduous Journey To AGI Peak</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Fan Wang - AI Research Scientist & Senior Engineer">
+	<meta name="author" content="Fan Wang">    
+	<link rel="shortcut icon" href="favicon.ico"> 
+	
+	<!-- Google Fonts -->	
+	<link rel="preconnect" href="https://fonts.googleapis.com "><link rel="preconnect" href="https://fonts.gstatic.com " crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300 ;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	
+	<!-- Bootstrpa Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css ">
+	
+	<!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+
+	<!-- Theme CSS -->  
+	<link id="theme-style" rel="stylesheet" href="assets/css/shine.css">
+
+	<!-- Custom CSS for Publications Section -->
+	<link rel="stylesheet" href="assets/css/publication.css">
+
+</head> 
+
+
+<body class="light-mode">
+	
+	<div class="container-fluid">
+			
+			<div class="main-content-wrapper">
+				<div class="container-fluid">
+					<div class="top-bar text-center position-relative">
+						<div class="top-bar-inner">
+							
+							<a class="btn btn-primary top-bar-cta" href="mailto:fanwang.px@gmail.com">Hire Me</a>
+					
+							<ul class="social-list list-inline mx-auto">
+								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="https://github.com/WorldEditors"><i class="fa-brands fa-github fa-fw"></i></a></li>
+								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="https://scholar.google.com/citations?user=vgFErZQAAAAJ&hl=en"><i class="fa-brands fa-google fa-fw"></i></a></li>
+								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="mailto:fanwang.px@gmail.com"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
+							</ul><!--//social-list-->
+							
+						</div><!--//top-bar-inner-->
+						
+					</div><!--//top-bar-->
+			
+					<div class="resume-wrapper mx-auto rounded-2">
+						<div class="resume-header px-4 px-lg-5">
+							<div class="resume-profile-holder text-center">
+								<img class="resume-profile-pic rounded-circle" src="assets/images/Profile.jpg" alt="image">
+								
+								<h2 class="resume-name text-uppercase">Fan Wang</h2>
+								<div class="resume-role-title text-uppercase">AI Research Scientist</div>
+								<div class="resume-contact mt-4">
+									<ul class="resume-contact-list list-unstyled list-inline mb-0 justify-content-between">
+										<li class="list-inline-item me-md-3 me-lg-5"><i class="resume-contact-icon bi bi-telephone-inbound me-2"></i> +86 18676703540</li>
+										<li class="list-inline-item me-md-3 me-lg-5"><i class="resume-contact-icon bi bi-envelope me-2"></i> fanwang.px@gmail.com</li>
+										<li class="list-inline-item me-lg-5"><i class="resume-contact-icon bi bi-github me-2"></i> github.com/WorldEditors</li>
+									</ul>
+								</div><!--//resume-contact-->
+							</div><!--//profile-holder-->
+						</div><!--//resume-header-->
+						
+						<div class="resume-body p-4 p-lg-5">
+							<div class="row">
+								<div class="col-main col-12 col-lg-8 pe-lg-4">
+									<section class="resume-summary-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-person me-2"></i>About Me</h3>
+										<div class="resume-summary-desc">
+											Experienced AI Research Scientist with expertise in foundation models, autonomous driving, natural language processing, and reinforcement learning. <br><br>
+											Proven track record of leading research teams and developing cutting-edge AI technologies with significant commercial impact. <br><br>
+											I am currently interested in developing foundation models that enable lifelong learning agents.										
+										</div>
+									</section><!--//resume-section-->
+									
+									<hr>
+									
+									<!-- Publication Section -->
+									<div id="publications-container"></div>
+
+									<!-- Before closing </body> tag -->
+									<script>
+									fetch('publications.html')
+										.then(response => {
+										if (!response.ok) throw new Error("Failed to load publications.html");
+										return response.text();
+										})
+										.then(html => {
+										document.getElementById('publications-container').innerHTML = html;
+										})
+										.catch(error => {
+										console.error('Error loading publications:', error);
+										document.getElementById('publications-container').innerHTML = 
+											'<p style="color: red;">Failed to load publications.</p>';
+										});
+									</script>
+									
+									<hr>
+									
+									<section class="resume-experience-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-briefcase me-2"></i>Work Experience</h3>
+										<div class="resume-timeline position-relative">
+										    <article class="resume-timeline-item position-relative pb-5">
+											    
+											    <div class="resume-timeline-item-header mb-2">
+												    
+												    <div class="resume-position-meta d-flex justify-content-between mb-1">
+													    <div class="resume-position-time">2024 - Present</div>
+													    <div class="resume-company-name">Shenzhen Institute of AI and Robotics for Society (AIRS)</div>
+												    </div>
+											        <h3 class="resume-position-title mb-1">Research Scientist - Multimodal and Embodied Foundation Models</h3>
+
+											    </div><!--//resume-timeline-item-header-->
+											    <div class="resume-timeline-item-desc">
+												 
+												    <ul class="resume-timeline-list">
+													    <li>Proposed next-generation in-context learning and self-evolving foundation decision models and world models</li>
+													    <li>Small-scale model validation for cross-scenario navigation, cross-embodiment motion control, etc.</li>
+													    <li>Main results available at: <a href="https://airs.cuhk.edu.cn/en/OmniRL">OmniRL Project Page</a></li>
+												    </ul>
+												    
+											    </div><!--//resume-timeline-item-desc-->
+		
+										    </article><!--//resume-timeline-item-->
+								    
+										    <article class="resume-timeline-item position-relative pb-5">
+
+											    <div class="resume-timeline-item-header mb-2">
+												    
+												    <div class="resume-position-meta d-flex justify-content-between mb-1">
+													    <div class="resume-position-time">2024 (Jan-Aug)</div>
+													    <div class="resume-company-name">Baidu NLP Department</div>
+												    </div>
+											        <h3 class="resume-position-title mb-1">ERNIE Bot Post-training (T10)</h3>
+
+											    </div><!--//resume-timeline-item-header-->
+											    <div class="resume-timeline-item-desc">
+												    <ul class="resume-timeline-list">
+													    <li>Proposed and deployed multi-objective Pareto optimization DPO solution, significantly improving 10-billion-scale model performance</li>
+													    <li>Explored autonomous evolution mechanism integrating model generation and evaluation, achieving breakthroughs in multi-round DPO performance</li>
+													    <li>Explored multimodal and embodied data synthesis directions such as autonomous driving</li>
+												    </ul>
+												    
+											    </div><!--//resume-timeline-item-desc-->
+		
+										    </article><!--//resume-timeline-item-->
+										    
+										    <article class="resume-timeline-item position-relative pb-5">
+
+											    <div class="resume-timeline-item-header mb-2">
+												    
+												    <div class="resume-position-meta d-flex justify-content-between mb-1">
+													    <div class="resume-position-time">2022-2023</div>
+													    <div class="resume-company-name">Baidu Inc. - DARPA Virtual Project</div>
+												    </div>
+											        <h3 class="resume-position-title mb-1">Lead of Autonomous Driving 2.0 Foundation Model Team (T10)</h3>
+
+											    </div><!--//resume-timeline-item-header-->
+											    <div class="resume-timeline-item-desc">
+												    <ul class="resume-timeline-list">
+													    <li>Assisted the Group Technology Strategy Committee in developing next-generation autonomous driving technology plans</li>
+													    <li>Proposed end-to-end autonomous driving models integrating world models and decision models</li>
+													    <li>Real-vehicle deployment testing, achieved 98% success rate at Haidian test track with random disturbances</li>
+												    </ul>
+												    
+											    </div><!--//resume-timeline-item-desc-->
+		
+										    </article><!--//resume-timeline-item-->
+										    
+										    <article class="resume-timeline-item position-relative pb-5">
+
+											    <div class="resume-timeline-item-header mb-2">
+												    
+												    <div class="resume-position-meta d-flex justify-content-between mb-1">
+													    <div class="resume-position-time">2018-2022</div>
+													    <div class="resume-company-name">Baidu NLP Department - Deep Learning</div>
+												    </div>
+											        <h3 class="resume-position-title mb-1">Technical Lead (T8-T9)</h3>
+
+											    </div><!--//resume-timeline-item-header-->
+											    <div class="resume-timeline-item-desc">
+												    <ul class="resume-timeline-list">
+													    <li>General Dialogue Group: Led release of PLATO, China's first commercial generative dialogue foundation model</li>
+													    <li>Established AI bio-computing direction, open-sourced PaddleHelix platform, published in Nature sub-journals</li>
+													    <li>Led reinforcement learning direction, open-sourced PARL framework, won NeurIPS competitions 3 times</li>
+													    <li>Collaborated with Baidu Maps, improved ETA accuracy with graph models</li>
+												    </ul>
+												    
+											    </div><!--//resume-timeline-item-desc-->
+		
+										    </article><!--//resume-timeline-item-->
+							            </div><!--//resume-timeline-->
+									</section><!--//resume-experience-section-->
+								</div><!--//col-8-->
+								<div class="col-12 col-lg-4 ps-lg-4">
+									
+									<section class="resume-skills-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-gear me-2"></i>Tech Stack</h3>
+										
+										<ul class="list-unstyled">
+								        <li class="mb-2">
+								            <div class="resume-skill-name">Deep Learning</div>
+									        <div class="progress resume-progress" role="progressbar" aria-label="Basic example" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+											  <div class="progress-bar resume-progress-bar" style="width: 95%"></div>
+											</div>
+								        </li>
+								        <li class="mb-2">
+								            <div class="resume-skill-name">Reinforcement Learning</div>
+									        <div class="progress resume-progress" role="progressbar" aria-label="Basic example" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+											  <div class="progress-bar resume-progress-bar" style="width: 95%"></div>
+											</div>
+								        </li>
+								        <li class="mb-2">
+								            <div class="resume-skill-name">Natural Language Processing</div>
+									        <div class="progress resume-progress" role="progressbar" aria-label="Basic example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+											  <div class="progress-bar resume-progress-bar" style="width: 85%"></div>
+											</div>
+								        </li>
+								        <li class="mb-2">
+								            <div class="resume-skill-name">Meta-Learning</div>
+								            <div class="progress resume-progress" role="progressbar" aria-label="Basic example" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+											  <div class="progress-bar resume-progress-bar" style="width: 85%"></div>
+											</div>
+									        
+								        </li>
+								        <li class="mb-2">
+								            <div class="resume-skill-name">Python & Torch</div>
+											<div class="progress resume-progress" role="progressbar" aria-label="Basic example" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
+											  <div class="progress-bar resume-progress-bar" style="width: 95%"></div>
+											</div>
+								        </li>
+								        <li class="mb-2">
+								            <div class="resume-skill-name">C++</div>
+											<div class="progress resume-progress" role="progressbar" aria-label="Basic example" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
+											  <div class="progress-bar resume-progress-bar" style="width: 60%"></div>
+											</div>
+								        </li>
+							        </ul>
+										
+									</section><!--//resume-section-->
+									
+									<hr>
+									
+									<section class="resume-skills-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-person-gear me-2"></i>Soft Skills</h3>
+										<ul class="list-inline">
+								            <li class="list-inline-item"><span class="badge resume-skill-badge">Leadership</span></li>
+								            <li class="list-inline-item"><span class="badge resume-skill-badge">Project Management</span></li>
+								            <li class="list-inline-item"><span class="badge resume-skill-badge">Engineering</span></li>
+								            <li class="list-inline-item"><span class="badge resume-skill-badge">Frontier Research</span></li>
+								            <li class="list-inline-item"><span class="badge resume-skill-badge">Public Speaking</span></li>
+							            </ul>
+									</section><!--//resume-section-->
+									
+									<hr>
+									
+									<section class="resume-projects-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-code-slash me-2"></i>Key Achievements</h3>
+										<div class="item">
+											<h4 class="item-heading">
+												<i class="item-icon bi bi-square-fill me-2"></i>
+													<a href="https://scholar.google.com/citations?user=vgFErZQAAAAJ&hl=en">Publications & Patents</a> 
+											</h4>
+											<div class="item-desc">
+												40+ published papers <br>
+												80+ authorized patents
+											</div>
+										</div><!--//item-->
+										<div class="item">
+											<h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i>Awards</h4>
+											<div class="item-desc">
+												2018 Baidu Pride Best Individual Award  <br>
+												2018 Baidu Highest Awards (Team) <br>
+												2020 Baidu Pride Best Individual Award <br>
+												2020 Baidu Highest Awards (Team) <br>
+    											2022 CAICT Excellent Large Model Application Case (Team) <br>
+    											2022 Shenzhen Excellent Science and Technology Paper Achievement Award (Team) <br>
+												2023 WU Wenjun AI Science and Technology Progress Award <br>
+												2025 World IoT Expo Industry Pioneer Award (Team) <br>
+											</div>
+										</div><!--//item-->
+										<div class="item">
+											<h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i>Open Source</h4>
+											<div class="item-desc">
+												2020-2022: <a href="https://github.com/PaddlePaddle/PARL">PARL</a> <br>
+												2020-2022: <a href="https://github.com/PaddlePaddle/PaddleRobotics ">PaddleRobotics</a> <br>
+												2020-2022: <a href="https://github.com/PaddlePaddle/PaddleHelix">PaddleHelix</a> <br>
+												2021-2022: <a href="https://github.com/PaddlePaddle/MetaGym">MetaGym</a> <br>
+												2025-Present: <a href="https://github.com/airs-cuhk/airsoul">AirSoul</a> <br>
+												2025-Present: <a href="https://github.com/FutureAGI/Xenoverse/">Xenoverse</a>
+											</div>
+										</div><!--//item-->
+									</section>
+									
+									<hr>
+									
+									<section class="resume-educate-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-book me-2"></i>Education</h3>
+										<ul class="list-unstyled">
+										    <li class="mb-2">
+										        <div class="resume-degree font-weight-bold">Doctor of Electronic Information Engineering</div>
+										        <div class="resume-degree-org">University of Science and Technology of China (USTC)</div>
+										        <div class="resume-degree-time">2021 - 2025</div>
+										    </li>
+										    <li class="mb-2">
+										        <div class="resume-degree font-weight-bold">M.S. Mechanical Engineering</div>
+										        <div class="resume-degree-org">University of Colorado at Boulder</div>
+										        <div class="resume-degree-time">2008 - 2010</div>
+										    </li>
+										    <li>
+										        <div class="resume-degree font-weight-bold">B.S. Applied Physics</div>
+										        <div class="resume-degree-org">University of Science and Technology of China</div>
+										        <div class="resume-degree-time">2004 - 2008</div>
+										    </li>
+									    </ul>
+									</section><!--//resume-section-->
+									
+									<hr>
+									
+									<section class="resume-lang-section resume-section">
+										<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-translate me-2"></i>Languages</h3>
+										 <ul class="list-unstyled resume-lang-list">
+										    <li class="mb-2">
+										        <div class="resume-lang-name">Chinese (Native)</div>
+										        <div class="resume-level-indicator row gx-0 flex-nowrap">
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+										        </div><!--//resume-level-indicator-->
+										    </li>
+										     <li class="mb-2">
+										        <div class="resume-lang-name">English (Fluent)</div>
+										        <div class="resume-level-indicator row gx-0 flex-nowrap">
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-empty"></span></div>
+										        </div><!--//resume-level-indicator-->
+										    </li>
+											<li class="mb-2">
+										        <div class="resume-lang-name">Japanese (JPLT-4)</div>
+										        <div class="resume-level-indicator row gx-0 flex-nowrap">
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-full"></span></div>
+											        <div class="col"><span class="item item-empty"></span></div>
+											        <div class="col"><span class="item item-empty"></span></div>
+											        <div class="col"><span class="item item-empty"></span></div>
+											        <div class="col"><span class="item item-empty"></span></div>
+											        <div class="col"><span class="item item-empty"></span></div>
+											        <div class="col"><span class="item item-empty"></span></div>
+											        <div class="col"><span class="item item-empty"></span></div>
+										        </div><!--//resume-level-indicator-->
+										    </li>
+										</ul>
+									</section>
+								</div><!--//col-side-->
+							</div><!--//row-->
+					    </div><!--//resume-body-->
+				    </div><!--//resume-wrapper-->
+				</div><!--//container-fluid-->
+			</div><!--//main-content-wrapper-->
+		
+		
+		</div><!--//row-->
+	
+	</div><!--//container-->
+	
+	<footer class="footer text-center py-4">
+		<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+		<small class="copyright">Designed with <span class="sr-only">love</span><i class="bi bi-heart-fill" style="color:#fe655c"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com " target="_blank">Xiaoying Riley</a> for developers</small>
+	</footer>
+
+</body>
+</html>
