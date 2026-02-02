@@ -22,3 +22,20 @@
     opacity: 0.7;            /* Slight fade on hover */
     /* or color: #your-accent-color; */
 }
+
+.visitor-count {
+    font-family: 'Segoe UI', sans-serif;
+    color: #666;
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.count-number {
+    color: #007acc;
+    font-weight: bold;
+    font-size: 18px;
+}
