@@ -46,3 +46,22 @@ If you'd like to **use the template without the attribution link**, you can [buy
 ## Credits
 - [Bootstrap](http://getbootstrap.com/)
 - [FontAwesome](http://fortawesome.github.io/Font-Awesome/)
+
+## Content Maintenance
+
+The homepage and detail pages now use a single data source:
+
+- `assets/js/profile-data.js`
+
+Update these sections there:
+
+- `about`: personal introduction paragraphs
+- `experiences`: full experience timeline, shown newest first
+- `publications`: representative papers, shown newest first
+- `previewLimits`: controls how many items appear on the homepage
+
+Pages:
+
+- `index.html`: homepage with short previews
+- `experiences.html`: full experience page
+- `publications.html`: full publications page
