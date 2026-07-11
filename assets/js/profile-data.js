@@ -40,7 +40,9 @@ window.PROFILE_DATA = {
     ],
     sameAs: [
       "https://github.com/WorldEditors",
-      "https://scholar.google.com/citations?user=vgFErZQAAAAJ&hl=en"
+      "https://scholar.google.com/citations?user=vgFErZQAAAAJ&hl=en",
+      "https://www.zhihu.com/people/fan-fan-20-64-95-65",
+      "https://futureagi.github.io/"
     ]
   },
   previewLimits: {

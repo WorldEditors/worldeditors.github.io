@@ -1,67 +1,64 @@
-<a href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/shine-free-bootstrap-5-light-mode-resume-cv-template-for-developers/" target="_blank"><img src="https://themes.3rdwavemedia.com/wp-content/uploads/2023/06/free-bootstrap-resume-theme-shine-promo.jpg" alt="Shine - Bootstrap 5 Light Mode Resume/CV Template for Software Developers" /></a>
+# Personal Academic Profile Template
 
-## Theme Details & Demo
+This repository hosts a static GitHub Pages profile site for Fan Wang. It is adapted from the Shine Bootstrap resume template and reorganized as a data-driven academic/research profile with bilingual content, publication cards, concise homepage previews, and dedicated detail pages.
 
-**Demo:** https://themes.3rdwavemedia.com/demo/bs5/shine/
+## Pages
 
-Shine is a **free Bootstrap 5 resume/CV template** I made for software developers. Built on **Bootstrap 5 and SASS**, it's quick and easy to change the template styling. This modern template is designed to help you **build your personal brand and attract high-paying opportunities**!
+- `index.html`: homepage with profile summary, selected publications, condensed experience, awards, and education.
+- `publications.html`: full publication list.
+- `experiences.html`: full professional experience timeline.
 
-## Author & License
+## Content Model
 
-This Bootstrap template is made by UX/UI designer [Xiaoying Riley](https://twitter.com/3rdwave_themes) for developers and is 100% FREE as long as you **keep the footer attribution link**. You do not have the rights to resell, sublicense or redistribute (even for free) the template on its own or as a separate attachment from any of your work.
-
-
-If you'd like to **use the template without the attribution link**, you can [buy the **commercial license** via the theme website](https://themes.3rdwavemedia.com/bootstrap-templates/resume/shine-free-bootstrap-5-light-mode-resume-cv-template-for-developers/)
-
-
-#### Follow Xiaoying
-
-[Twitter](https://twitter.com/3rdwave_themes)
-
-[Facebook](https://www.facebook.com/3rdwavethemes/)
-
-[Dribbble](https://dribbble.com/Xiaoying)
-
-[Medium](https://medium.com/@3rdwave_themes)
-
-[Linkedin](https://uk.linkedin.com/in/xiaoying)
-
-
-## Latest Version
-**v1.1** - 2024-09-16
-
-[Changelog](https://themes.3rdwavemedia.com/bootstrap-templates/resume/shine-free-bootstrap-5-light-mode-resume-cv-template-for-developers/?target=changelog)
-
-
-## Features
-
--  Fully Responsive
--  HTML5 + CSS3
--  Built on Bootstrap 5
--  **SCSS** source files included
--  FontAwesome icons
--  Bootstrap icons
--  Compatible with all modern browsers
-
-## Credits
-- [Bootstrap](http://getbootstrap.com/)
-- [FontAwesome](http://fortawesome.github.io/Font-Awesome/)
-
-## Content Maintenance
-
-The homepage and detail pages now use a single data source:
+Most profile content is maintained in one shared data file:
 
 - `assets/js/profile-data.js`
 
 Update these sections there:
 
-- `about`: personal introduction paragraphs
-- `experiences`: full experience timeline, shown newest first
-- `publications`: representative papers, shown newest first
-- `previewLimits`: controls how many items appear on the homepage
+- `about`: bilingual personal introduction paragraphs.
+- `experiences`: work history and research leadership items.
+- `publications`: representative publications and research articles.
+- `previewLimits`: item counts used by the homepage preview sections.
 
-Pages:
+Rendering logic lives in:
 
-- `index.html`: homepage with short previews
-- `experiences.html`: full experience page
-- `publications.html`: full publications page
+- `assets/js/profile-renderer.js`
+
+The renderer reads `window.profileData` and populates the homepage and detail pages based on each page's `data-page` attribute.
+
+## Styling
+
+Core visual styling comes from:
+
+- `assets/css/shine.css`: base theme and customized homepage layout.
+- `assets/css/publication.css`: publication cards, detail-page layout, bilingual profile polish, and compact content blocks.
+
+Static images and icons are stored under:
+
+- `assets/images/`
+- `favicon-robot.svg`
+
+## Local Preview
+
+From the repository root, run a simple static server:
+
+```powershell
+python -m http.server 5502
+```
+
+Then open:
+
+```text
+http://127.0.0.1:5502/
+```
+
+The site can also be opened directly from `index.html`, but using a local server is closer to GitHub Pages behavior.
+
+## Deployment
+
+This is a GitHub Pages site. Pushing changes to the configured branch updates the public site after GitHub Pages finishes building.
+
+## Template Notes
+
+The site is based on the Shine Bootstrap 5 resume/CV template and has been customized for a research profile. Keep third-party asset licenses in mind when reusing or redistributing this repository.

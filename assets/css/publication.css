@@ -304,8 +304,24 @@
   margin-top: 0.18rem;
 }
 
-.visit-counter {
+.site-footer {
+  padding: 1.5rem 0 2.5rem;
   text-align: center;
+}
+
+.visit-counter {
+  display: inline-flex;
+  opacity: 0.82;
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+
+.visit-counter:hover {
+  opacity: 1;
+}
+
+.visit-counter img {
+  display: block;
 }
 
 @media (max-width: 767.98px) {
