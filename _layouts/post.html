@@ -11,7 +11,7 @@ body_class: post
 
   <div class="resume-body p-4 p-lg-5">
     <header class="blog-post-header">
-      <a class="blog-back-link" href="{{ '/blog.html' | relative_url }}"><i class="bi bi-arrow-left"></i> Blog</a>
+      <a class="blog-back-link" href="{{ '/blog/' | relative_url }}"><i class="bi bi-arrow-left"></i> Blog</a>
       <p class="detail-page-kicker">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} / {{ page.author }}{% endif %}</p>
       <h1 class="detail-page-title">{{ page.title }}</h1>
       {% if page.subtitle %}

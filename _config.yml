@@ -1,6 +1,6 @@
 title: Fan Wang
 description: AI research notes and profile for Fan Wang.
-url: "https://worldeditors.github.io"
+url: "https://fan.world-editor.com"
 baseurl: ""
 permalink: /blog/:year/:month/:day/:title/
 markdown: kramdown

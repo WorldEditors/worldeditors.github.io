@@ -1,15 +1,45 @@
 ---
+layout: default
+title: Blog
+description: Research notes and essays by Fan Wang.
+nav: blog
+body_class: blog
 permalink: /blog/
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url={{ '/blog.html' | relative_url }}">
-  <link rel="canonical" href="{{ '/blog.html' | relative_url }}">
-  <title>Blog | Fan Wang</title>
-</head>
-<body>
-  <p><a href="{{ '/blog.html' | relative_url }}">Blog</a></p>
-</body>
-</html>
+
+<main class="resume-wrapper mx-auto rounded-2 detail-page-wrapper blog-page-wrapper">
+  <div class="resume-body p-4 p-lg-5">
+    <div class="detail-page-header blog-page-header">
+      <div>
+        <p class="detail-page-kicker">Research Notes</p>
+        <h1 class="detail-page-title">Blog</h1>
+        <p class="detail-page-description">Long-form notes on foundation models, agents, reinforcement learning, and general intelligence.</p>
+      </div>
+    </div>
+
+    <section class="blog-list" aria-label="Blog posts">
+      {% for post in site.posts %}
+      <article class="blog-card">
+        {% if post.header_img %}
+        <a class="blog-card-media" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
+          <img src="{{ '/' | append: post.header_img | relative_url }}" alt="">
+        </a>
+        {% endif %}
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>{{ post.date | date: "%B %-d, %Y" }}</span>
+            {% if post.tags and post.tags.size > 0 %}
+            <span>{{ post.tags | join: " / " }}</span>
+            {% endif %}
+          </div>
+          <h2 class="blog-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          {% if post.subtitle %}
+          <p class="blog-card-subtitle">{{ post.subtitle }}</p>
+          {% endif %}
+          <p class="blog-card-excerpt">{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+  </div>
+</main>

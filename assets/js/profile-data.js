@@ -42,7 +42,7 @@ window.PROFILE_DATA = {
       "https://github.com/WorldEditors",
       "https://scholar.google.com/citations?user=vgFErZQAAAAJ&hl=en",
       "https://www.zhihu.com/people/fan-fan-20-64-95-65",
-      "https://worldeditors.github.io/blog.html"
+      "https://fan.world-editor.com/blog/"
     ]
   },
   previewLimits: {
