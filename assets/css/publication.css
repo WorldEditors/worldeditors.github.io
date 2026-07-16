@@ -33,24 +33,33 @@
 
 .site-nav {
   align-items: center;
-  background: #fff;
-  border: 1px solid #e4e9f2;
-  border-radius: 999px;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
   display: inline-flex;
-  gap: 0.15rem;
-  padding: 0.25rem;
+  gap: 1.25rem;
+  min-height: 38px;
 }
 
 .site-nav-link {
-  border-radius: 999px;
-  color: #4f6591;
-  font-size: 0.88rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  line-height: 1;
-  padding: 0.68rem 1rem;
+  color: #66738a;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.2;
+  padding: 0.65rem 0.05rem 0.55rem;
+  position: relative;
   text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav-link::after {
+  background: #4f6591;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 0.18s ease;
+  width: 100%;
 }
 
 .site-nav-link:hover {
@@ -59,8 +68,15 @@
 }
 
 .site-nav-link.active {
-  background: #4f6591;
-  color: #fff;
+  color: #121822;
+}
+
+.site-nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.site-topbar-inner .social-list {
+  margin: 0;
 }
 
 .publications-grid {
@@ -559,23 +575,23 @@
 
 @media (max-width: 767.98px) {
   .site-topbar-inner {
-    align-items: stretch;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.75rem;
   }
 
   .site-nav {
-    justify-content: center;
-    width: 100%;
+    flex: 0 0 auto;
+    gap: 1rem;
+    justify-content: flex-start;
   }
 
   .site-nav-link {
-    flex: 1;
-    text-align: center;
+    flex: none;
   }
 
   .site-topbar-inner .social-list {
-    margin-bottom: 0;
-    text-align: center;
+    display: none;
   }
 
   .publication-card {
