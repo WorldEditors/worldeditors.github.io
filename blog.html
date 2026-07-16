@@ -19,9 +19,9 @@ body_class: blog
     <section class="blog-list" aria-label="Blog posts">
       {% for post in site.posts %}
       <article class="blog-card">
-        {% if post.header-img %}
+        {% if post.header_img %}
         <a class="blog-card-media" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
-          <img src="{{ '/' | append: post.header-img | relative_url }}" alt="">
+          <img src="{{ '/' | append: post.header_img | relative_url }}" alt="">
         </a>
         {% endif %}
         <div class="blog-card-content">
