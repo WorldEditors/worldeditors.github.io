@@ -1,0 +1,16 @@
+title: Fan Wang
+description: AI research notes and profile for Fan Wang.
+url: "https://worldeditors.github.io"
+baseurl: ""
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

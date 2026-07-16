@@ -1,10 +1,12 @@
-# Personal Academic Profile Template
+# Fan Wang Profile and Blog
 
-This repository hosts a static GitHub Pages profile site for Fan Wang. It is adapted from the Shine Bootstrap resume template and reorganized as a data-driven academic/research profile with bilingual content, publication cards, concise homepage previews, and dedicated detail pages.
+This repository hosts Fan Wang's GitHub Pages site. The former profile site is now the About section, and the former `futureagi.github.io` posts have been merged as the Blog while sharing the same visual style.
 
 ## Pages
 
-- `index.html`: homepage with profile summary, selected publications, condensed experience, awards, and education.
+- `index.html`: About page with profile summary, selected publications, condensed experience, awards, and education.
+- `blog.html`: Jekyll-powered blog index.
+- `_posts/`: migrated blog posts.
 - `publications.html`: full publication list.
 - `experiences.html`: full professional experience timeline.
 
@@ -37,11 +39,12 @@ Core visual styling comes from:
 Static images and icons are stored under:
 
 - `assets/images/`
+- `img/` for migrated blog media.
 - `favicon-robot.svg`
 
 ## Local Preview
 
-From the repository root, run a simple static server:
+The About page can still be previewed with a simple static server:
 
 ```powershell
 python -m http.server 5502
@@ -53,7 +56,11 @@ Then open:
 http://127.0.0.1:5502/
 ```
 
-The site can also be opened directly from `index.html`, but using a local server is closer to GitHub Pages behavior.
+The Blog requires Jekyll/Liquid rendering. With Ruby and Bundler installed, preview the full site with:
+
+```powershell
+bundle exec jekyll serve
+```
 
 ## Deployment
 

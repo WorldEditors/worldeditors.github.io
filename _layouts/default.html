@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}Fan Wang</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="author" content="Fan Wang">
+  <link rel="icon" type="image/svg+xml" href="{{ '/favicon-robot.svg?v=2' | relative_url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <script defer src="{{ '/assets/fontawesome/js/all.js' | relative_url }}"></script>
+  <link id="theme-style" rel="stylesheet" href="{{ '/assets/css/shine.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/publication.css' | relative_url }}">
+</head>
+
+<body class="light-mode" data-page="{% if page.body_class %}{{ page.body_class }}{% elsif page.layout == 'post' %}post{% else %}blog{% endif %}">
+  <div class="container-fluid">
+    <div class="main-content-wrapper">
+      <div class="container-fluid">
+        <div class="top-bar position-relative">
+          <div class="top-bar-inner site-topbar-inner">
+            <nav class="site-nav" aria-label="Primary">
+              <a class="site-nav-link{% if page.nav == 'about' %} active{% endif %}" href="{{ '/' | relative_url }}">About</a>
+              <a class="site-nav-link{% if page.nav == 'blog' or page.layout == 'post' %} active{% endif %}" href="{{ '/blog.html' | relative_url }}">Blog</a>
+            </nav>
+            <ul class="social-list list-inline">
+              <li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="https://github.com/WorldEditors" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github fa-fw"></i></a></li>
+              <li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="https://scholar.google.com/citations?user=vgFErZQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><i class="fa-brands fa-google fa-fw"></i></a></li>
+              <li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="https://www.zhihu.com/people/fan-fan-20-64-95-65" target="_blank" rel="noopener noreferrer" aria-label="Zhihu"><i class="fa-brands fa-zhihu fa-fw"></i></a></li>
+              <li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="mailto:fanwang.px@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope fa-fw"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <a class="visit-counter" href="https://hits.sh/worldeditors.github.io/" target="_blank" rel="noopener noreferrer" aria-label="View site visit counter">
+      <img src="https://hits.sh/worldeditors.github.io.svg?style=flat-square&label=Visits&color=007acc" alt="Visits">
+    </a>
+  </footer>
+</body>
+</html>
