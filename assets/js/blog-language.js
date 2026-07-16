@@ -19,9 +19,9 @@
       const stored = localStorage.getItem(storageKey);
       if (stored === "zh" || stored === "en") return stored;
     } catch (_) {
-      // Fall back to the browser language.
+      // Fall back to English when no explicit preference exists.
     }
-    return navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en";
+    return "en";
   };
 
   const selectLanguage = (language) => {

@@ -13,16 +13,16 @@ permalink: /blog/
       <div>
         <p class="detail-page-kicker">Research Notes</p>
         <h1 class="detail-page-title">Fan Wang's Blog</h1>
-        <p class="detail-page-description" data-language-content="zh">关于基础模型、智能体、强化学习与通用智能的长篇思考。</p>
-        <p class="detail-page-description" data-language-content="en" hidden>Long-form notes on foundation models, agents, reinforcement learning, and general intelligence.</p>
+        <p class="detail-page-description" data-language-content="zh" hidden>关于基础模型、智能体、强化学习与通用智能的长篇思考。</p>
+        <p class="detail-page-description" data-language-content="en">Long-form notes on foundation models, agents, reinforcement learning, and general intelligence.</p>
       </div>
       <div class="language-switcher" role="group" aria-label="Blog language">
-        <button class="language-option active" type="button" data-language-button="zh" aria-pressed="true">中文</button>
-        <button class="language-option" type="button" data-language-button="en" aria-pressed="false">English</button>
+        <button class="language-option" type="button" data-language-button="zh" aria-pressed="false">中文</button>
+        <button class="language-option active" type="button" data-language-button="en" aria-pressed="true">English</button>
       </div>
     </div>
 
-    {% include blog-list.html lang="zh" %}
-    {% include blog-list.html lang="en" hidden=true %}
+    {% include blog-list.html lang="zh" hidden=true %}
+    {% include blog-list.html lang="en" %}
   </div>
 </main>
