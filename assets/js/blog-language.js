@@ -13,6 +13,8 @@
   };
 
   const preferredLanguage = () => {
+    const requested = new URLSearchParams(window.location.search).get("lang");
+    if (requested === "zh" || requested === "en") return requested;
     try {
       const stored = localStorage.getItem(storageKey);
       if (stored === "zh" || stored === "en") return stored;
@@ -36,7 +38,13 @@
   };
 
   buttons.forEach((button) => {
-    button.addEventListener("click", () => selectLanguage(button.dataset.languageButton));
+    button.addEventListener("click", () => {
+      const language = button.dataset.languageButton;
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", language);
+      window.history.replaceState({}, "", url);
+      selectLanguage(language);
+    });
   });
   links.forEach((link) => {
     link.addEventListener("click", () => remember(link.dataset.languageLink));
