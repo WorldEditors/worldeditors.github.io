@@ -13,33 +13,16 @@ permalink: /blog/
       <div>
         <p class="detail-page-kicker">Research Notes</p>
         <h1 class="detail-page-title">Fan Wang's Blog</h1>
-        <p class="detail-page-description">Long-form notes on foundation models, agents, reinforcement learning, and general intelligence.</p>
+        <p class="detail-page-description" data-language-content="zh">关于基础模型、智能体、强化学习与通用智能的长篇思考。</p>
+        <p class="detail-page-description" data-language-content="en" hidden>Long-form notes on foundation models, agents, reinforcement learning, and general intelligence.</p>
+      </div>
+      <div class="language-switcher" role="group" aria-label="Blog language">
+        <button class="language-option active" type="button" data-language-button="zh" aria-pressed="true">中文</button>
+        <button class="language-option" type="button" data-language-button="en" aria-pressed="false">English</button>
       </div>
     </div>
 
-    <section class="blog-list" aria-label="Blog posts">
-      {% for post in site.posts %}
-      <article class="blog-card">
-        {% if post.header_img %}
-        <a class="blog-card-media" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
-          <img src="{{ '/' | append: post.header_img | relative_url }}" alt="">
-        </a>
-        {% endif %}
-        <div class="blog-card-content">
-          <div class="blog-card-meta">
-            <span>{{ post.date | date: "%B %-d, %Y" }}</span>
-            {% if post.tags and post.tags.size > 0 %}
-            <span>{{ post.tags | join: " / " }}</span>
-            {% endif %}
-          </div>
-          <h2 class="blog-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-          {% if post.subtitle %}
-          <p class="blog-card-subtitle">{{ post.subtitle }}</p>
-          {% endif %}
-          <p class="blog-card-excerpt">{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 }}</p>
-        </div>
-      </article>
-      {% endfor %}
-    </section>
+    {% include blog-list.html lang="zh" %}
+    {% include blog-list.html lang="en" hidden=true %}
   </div>
 </main>

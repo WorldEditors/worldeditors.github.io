@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
   <title>{% if page.title %}{{ page.title }} | {% endif %}Fan Wang</title>
   <meta charset="utf-8">
@@ -15,7 +15,16 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <script defer src="{{ '/assets/fontawesome/js/all.js' | relative_url }}"></script>
   <link id="theme-style" rel="stylesheet" href="{{ '/assets/css/shine.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/publication.css' | relative_url }}?v=2">
+  <link rel="stylesheet" href="{{ '/assets/css/publication.css' | relative_url }}?v=3">
+  {% if page.translation_url %}
+    {% if page.lang == 'en' %}
+  <link rel="alternate" hreflang="zh" href="{{ site.url }}{{ page.translation_url }}">
+  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url }}">
+    {% else %}
+  <link rel="alternate" hreflang="zh" href="{{ site.url }}{{ page.url }}">
+  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.translation_url }}">
+    {% endif %}
+  {% endif %}
 </head>
 
 <body class="light-mode" data-page="{% if page.body_class %}{{ page.body_class }}{% elsif page.layout == 'post' %}post{% else %}blog{% endif %}">
@@ -47,5 +56,8 @@
       <img src="https://hits.sh/worldeditors.github.io.svg?style=flat-square&label=Visits&color=007acc" alt="Visits">
     </a>
   </footer>
+  {% if page.nav == 'blog' or page.layout == 'post' %}
+  <script defer src="{{ '/assets/js/blog-language.js' | relative_url }}?v=1"></script>
+  {% endif %}
 </body>
 </html>

@@ -11,7 +11,20 @@ body_class: post
 
   <div class="resume-body p-4 p-lg-5">
     <header class="blog-post-header">
-      <a class="blog-back-link" href="{{ '/blog/' | relative_url }}"><i class="bi bi-arrow-left"></i> Blog</a>
+      {% if page.lang == 'en' %}
+        {% assign zh_url = page.translation_url %}
+        {% assign en_url = page.url %}
+      {% else %}
+        {% assign zh_url = page.url %}
+        {% assign en_url = page.translation_url %}
+      {% endif %}
+      <div class="blog-post-toolbar">
+        <a class="blog-back-link" href="{{ '/blog/' | relative_url }}"><i class="bi bi-arrow-left"></i> Blog</a>
+        <nav class="language-switcher" aria-label="Article language">
+          <a class="language-option{% unless page.lang == 'en' %} active{% endunless %}" href="{{ zh_url | relative_url }}" data-language-link="zh"{% unless page.lang == 'en' %} aria-current="page"{% endunless %}>中文</a>
+          <a class="language-option{% if page.lang == 'en' %} active{% endif %}" href="{{ en_url | relative_url }}" data-language-link="en"{% if page.lang == 'en' %} aria-current="page"{% endif %}>English</a>
+        </nav>
+      </div>
       <p class="detail-page-kicker">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} / {{ page.author }}{% endif %}</p>
       <h1 class="detail-page-title">{{ page.title }}</h1>
       {% if page.subtitle %}

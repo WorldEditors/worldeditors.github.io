@@ -1,0 +1,25 @@
+<section class="blog-list" aria-label="{% if include.lang == 'zh' %}中文博客文章{% else %}English blog posts{% endif %}" data-language-content="{{ include.lang }}"{% if include.hidden %} hidden{% endif %}>
+  {% assign language_posts = site.posts | where: "lang", include.lang %}
+  {% for post in language_posts %}
+  <article class="blog-card">
+    {% if post.header_img %}
+    <a class="blog-card-media" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
+      <img src="{{ '/' | append: post.header_img | relative_url }}" alt="">
+    </a>
+    {% endif %}
+    <div class="blog-card-content">
+      <div class="blog-card-meta">
+        <span>{{ post.date | date: "%B %-d, %Y" }}</span>
+        {% if post.tags and post.tags.size > 0 %}
+        <span>{{ post.tags | join: " / " }}</span>
+        {% endif %}
+      </div>
+      <h2 class="blog-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      {% if post.subtitle %}
+      <p class="blog-card-subtitle">{{ post.subtitle }}</p>
+      {% endif %}
+      <p class="blog-card-excerpt">{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</section>
