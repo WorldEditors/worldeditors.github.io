@@ -18,7 +18,7 @@ jobs:
       - name: Generate the sitemap
         uses: cicirello/generate-sitemap@v1
         with:
-          base-url-path: https://fan.world-editor.com/ 
+          base-url-path: https://fan.world-editor.com/
 
       - name: Commit and push the sitemap
         run: |
